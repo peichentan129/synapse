@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+html {
+  font-family: var(--font-body);
+  background: #f7f7fb;
+}
+
+body {
+  margin: 0;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+@keyframes drift {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(2%, -3%) scale(1.05); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.animate-drift {
+  animation: drift 18s ease-in-out infinite;
+}
+
+@keyframes drift-slow {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-3%, 2%) scale(1.08); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.animate-drift-slow {
+  animation: drift-slow 24s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes synapse-fire {
+  0% { stroke-dashoffset: 240; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+.synapse-line {
+  stroke-dasharray: 240;
+  animation: synapse-fire 4s linear infinite;
+}

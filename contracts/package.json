@@ -1,0 +1,23 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/node": "^26.4.1",
+    "dotenv": "^17.4.2",
+    "hardhat": "^2.29.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2"
+  }
+}
