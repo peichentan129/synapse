@@ -1,14 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 :root {
-  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-display: "Fraunces", "Iowan Old Style", serif;
   --font-body: "Inter", system-ui, sans-serif;
+  --bg: #0a0a0b;
+  --panel: #131211;
+  --hairline: #2a2822;
+  --ink: #efece4;
+  --muted: #9a9484;
+  --gold: #d8b878;
 }
 
 html {
   font-family: var(--font-body);
-  background: #f7f7fb;
+  background: var(--bg);
 }
 
 body {
@@ -21,41 +27,40 @@ body {
 
 @keyframes drift {
   0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(2%, -3%) scale(1.05); }
+  50% { transform: translate(2%, -2%) scale(1.04); }
   100% { transform: translate(0, 0) scale(1); }
 }
 
 .animate-drift {
-  animation: drift 18s ease-in-out infinite;
+  animation: drift 22s ease-in-out infinite;
 }
 
-@keyframes drift-slow {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-3%, 2%) scale(1.08); }
-  100% { transform: translate(0, 0) scale(1); }
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-.animate-drift-slow {
-  animation: drift-slow 24s ease-in-out infinite;
+.animate-rotate-slow {
+  animation: rotate-slow 90s linear infinite;
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 0.3; }
+  0%, 100% { opacity: 0.35; }
   50% { opacity: 1; }
 }
 
 .animate-pulse-dot {
-  animation: pulse-dot 2s ease-in-out infinite;
+  animation: pulse-dot 2.4s ease-in-out infinite;
 }
 
-@keyframes synapse-fire {
-  0% { stroke-dashoffset: 240; opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
+@keyframes nous-fire {
+  0% { stroke-dashoffset: 200; opacity: 0; }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
   100% { stroke-dashoffset: 0; opacity: 0; }
 }
 
-.synapse-line {
-  stroke-dasharray: 240;
-  animation: synapse-fire 4s linear infinite;
+.nous-line {
+  stroke-dasharray: 200;
+  animation: nous-fire 5s linear infinite;
 }

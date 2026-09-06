@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.24;
 
-/// @title Synapse
+/// @title Nous
 /// @notice A single shared on-chain perceptron. Each round it reveals a feature
 /// vector, the crowd stakes on the hidden target function's verdict, and after
 /// the round resolves the model's weights nudge toward the correct answer.
-contract Synapse {
+contract Nous {
     uint8 public constant DIM = 5;
     uint256 public constant STAKE_WINDOW = 5 minutes;
     uint256 public constant MIN_STAKE = 1e14;

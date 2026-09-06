@@ -1,10 +1,10 @@
 const { ethers } = require("hardhat");
 
 const FACTORY = "0x4e59b44847b379578588920cA78FbF26c0B4956C";
-const SALT = ethers.keccak256(ethers.toUtf8Bytes("Synapse.v1"));
+const SALT = ethers.keccak256(ethers.toUtf8Bytes("Nous.v1"));
 
 async function main() {
-  const Synapse = await ethers.getContractFactory("Synapse");
+  const Synapse = await ethers.getContractFactory("Nous");
   const initCode = Synapse.bytecode;
   const initCodeHash = ethers.keccak256(initCode);
 

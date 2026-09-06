@@ -1,10 +1,10 @@
 const { expect } = require("chai");
 const { ethers, network } = require("hardhat");
 
-describe("Synapse", function () {
+describe("Nous", function () {
   it("runs a full epoch: start, stake, resolve, claim", async function () {
     const [deployer, alice, bob] = await ethers.getSigners();
-    const Synapse = await ethers.getContractFactory("Synapse");
+    const Synapse = await ethers.getContractFactory("Nous");
     const synapse = await Synapse.deploy();
     await synapse.waitForDeployment();
 
@@ -50,7 +50,7 @@ describe("Synapse", function () {
 
   it("refunds everyone when nobody is on the winning side", async function () {
     const [, alice, bob] = await ethers.getSigners();
-    const Synapse = await ethers.getContractFactory("Synapse");
+    const Synapse = await ethers.getContractFactory("Nous");
     const synapse = await Synapse.deploy();
     await synapse.waitForDeployment();
 

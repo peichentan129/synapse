@@ -22,7 +22,7 @@ export const wagmiConfig = createConfig({
     // targeting MetaMask directly loses when multiple wallets race for
     // window.ethereum even though MetaMask is installed and unlocked.
     injected({ shimDisconnect: true }),
-    coinbaseWallet({ appName: "Synapse" }),
+    coinbaseWallet({ appName: "Nous" }),
   ],
   transports: {
     [botchain.id]: http("https://rpc.botchain.ai"),
